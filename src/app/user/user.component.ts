@@ -5,6 +5,11 @@ import {
   Output,
 } from '@angular/core';
 
+interface User {
+  id: string;
+  avatar: string;
+  name: string;
+}
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -13,11 +18,7 @@ import {
   styleUrl: './user.component.css',
 })
 export class UserComponent {
-  @Input({required: true}) user!: {
-    id: string;
-    avatar: string;
-    name: string;
-  }
+  @Input({required: true}) user!: User;
   @Output() idSender = new EventEmitter<string>();
 
   public get imagePath(): string {
