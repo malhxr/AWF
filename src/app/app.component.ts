@@ -14,4 +14,9 @@ import { DUMMY_USERS } from "./dummy-users";
 export class AppComponent {
   users = DUMMY_USERS
   title = 'AWF';
+
+  onSelectUser (id: string) {
+    console.log("the id of the user is " + id);
+    
+  }
 }
