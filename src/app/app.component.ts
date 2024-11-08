@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { UserComponent } from "./user/user.component";
@@ -17,12 +17,10 @@ export class AppComponent {
   title = 'AWF';
   selectedUserID?: string;
 
-  
   public get selectedUser() {
     return this.users.find((x)=>x.id === this.selectedUserID)!;
   }
   
-
   onSelectUser (selectedId: string) {
     console.log("the id of the user is " + selectedId);
     this.selectedUserID = selectedId
