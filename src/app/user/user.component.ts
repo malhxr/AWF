@@ -10,6 +10,7 @@ import { User } from './user.model';
 })
 export class UserComponent {
   @Input({ required: true }) user!: User;
+  @Input({required: true}) isUserSelected! : boolean;
   @Output() idSender = new EventEmitter<string>();
 
   public get imagePath(): string {
